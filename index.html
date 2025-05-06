@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Score Analyzer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  
+</head>
+<body>
+  <div class="container">
+    <h1><i class="bi bi-bar-chart-line-fill"></i> Score Analyzer</h1>
+    <h2><i class="bi bi-journal-check"></i> Enter Your Subject Marks</h2>
+
+    <form id="scoreForm">
+      <div class="mb-3">
+        <label for="subject1" class="form-label"><i class="bi bi-calculator-fill"></i> Math</label>
+        <input type="number" class="form-control" id="subject1" required min="0" max="100" />
+      </div>
+      <div class="mb-3">
+        <label for="subject2" class="form-label"><i class="bi bi-flask"></i> Science</label>
+        <input type="number" class="form-control" id="subject2" required min="0" max="100" />
+      </div>
+      <div class="mb-3">
+        <label for="subject3" class="form-label"><i class="bi bi-book-half"></i> English</label>
+        <input type="number" class="form-control" id="subject3" required min="0" max="100" />
+      </div>
+      <button type="button" class="btn btn-primary w-100" onclick="analyzeScores()">
+        <i class="bi bi-graph-up-arrow"></i> Analyze Scores
+      </button>
+    </form>
+
+    <div class="result-box mt-4">
+      <h3>Total Score: <span id="totalScore">-</span></h3>
+      <h3>Average Score: <span id="averageScore">-</span></h3>
+      <h3>
+        Performance: 
+        <span id="performanceMessage" class="performance-badge">-</span>
+      </h3>
+    </div>
+  </div>
+
+  
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
